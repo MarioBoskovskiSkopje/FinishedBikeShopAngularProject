@@ -1,0 +1,86 @@
+<div>
+  <h2>{{title}}</h2>
+  <button (click)="showFilteredBikes('male')">Male Bikes</button>
+  <button (click)="showFilteredBikes('female')">Female Bikes</button>
+  <button (click)="showFilteredBikes('child')">Child Bikes</button>
+</div>
+<div>
+  <form name="search" (submit)="searching()">
+
+    <input type="text" autofocus placeholder="Search By Brand Name" [(ngModel)]="searchBrand" name="search" />
+
+  </form>
+  <button (click)="searching()">Search by Brand Name</button>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div>
+      <h3>Check Boxes:</h3>
+      
+      <div *ngFor="let item of allBikes | removeduplicates : 'model'">
+        <div class="checkbox">
+          <label for="{{item.model}}">
+            <input #checkValue type="checkbox" value="" (click)="onCheck('model',item.model,checkValue)">{{item.model}}</label>
+
+          <label for="{{item.material}}">
+            <input #checkValue5 type="checkbox" value="" (click)="onCheck('material',item.material,checkValue5)">{{item.material}}</label>
+
+            <label for="{{item.wheels}}">
+              <input #checkValue4 type="checkbox" value="" (click)="onCheck('material',item.wheels,checkValue4)">{{item.wheels}}</label>
+
+              <label for="{{item.kind}}">
+                <input #checkValue3 type="checkbox" value="" (click)="onCheck('kind',item.kind,checkValue3)">{{item.kind}}</label>
+            
+                <label for="{{item.shifter}}">
+                  <input #checkValue1 type="checkbox" value="" (click)="onCheck('shifter',item.shifter,checkValue1)">{{item.shifter}}</label>
+
+                  <label for="{{item.ramSize}}">
+                    <input #checkValue2 type="checkbox" value="" (click)="onCheck('ramSize',item.ramSize,checkValue2)">{{item.ramSize}}</label>
+
+                    <label for="{{item.genre}}">
+                      <input #checkValue6 type="checkbox" value="" (click)="onCheck('genre',item.genre,checkValue6)">{{item.genre}}</label>
+            </div>
+          
+          
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <p>Sort by Price:</p>
+  <button class="btn btn-primary" (click)="sorting('minPrice')">Min-Max</button>
+  <button class="btn btn-primary" (click)="sorting('maxPrice')">Max-Min</button>
+</div>
+
+
+
+
+<div class="top-div">
+  <section class="section">
+    <div class="container" id="displayBikesContainer">
+      <div class="col-xs-2 col-sm-4 col-md-8 col-lg-4">
+        <div *ngFor="let bike of bikes" class="card">
+          <img class="image-card-body" src="{{bike.imageUrl}}" />
+          <div class="card-body">
+            <p class="card-body-text">MODEL : {{bike.model}}</p>
+            <p class="card-body-text">MATERIAL : {{bike.material}}</p>
+            <p class="card-body-text">DISKBRAKE: {{bike.diskBrake}}</p>
+            <p class="card-body-text">VBRAKE : {{bike.vBrake}}</p>
+            <p class="card-body-text">WHEELS : {{bike.wheels}}</p>
+            <p class="card-body-text">SHIFTER : {{bike.shifter}}</p>
+            <p class="card-body-text">GENRE : {{bike.genre}}</p>
+            <p class="card-body-text">KIND : {{bike.kind}}</p>
+            <p class="card-body-text">RAMSIZE : {{bike.ramSize}}</p>
+            <p class="card-body-text">PRICE : {{bike.price}}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
