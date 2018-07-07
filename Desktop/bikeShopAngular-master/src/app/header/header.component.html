@@ -12,11 +12,11 @@
   </form>
   <button (click)="searching()">Search by Brand Name</button>
 </div>
+
 <div class="container">
   <div class="row">
-
-
     <div class="col-4">
+
       <div *ngFor="let item of allBikes | removeduplicates">
         <div class="checkbox">
           <label for="{{item.model}}">
@@ -79,7 +79,6 @@
   </div>
 </div>
 
-
 <div>
   <h1>Sort by Price:</h1>
   <button class="btn btn-primary" (click)="sorting('minPrice')">Min-Max</button>
@@ -114,5 +113,3 @@
 
   </section>
 </div>
-
-

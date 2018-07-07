@@ -4,11 +4,15 @@
     text-align: center;
     width: 100%;
     font-size: 30px;
-    background-color: lightcoral;
+    background-image: url("http://www.cycleoflifeadventures.com/blog/files/Cyle-of-Life-Adventures_Why-Youll-Love-cycling-the-Outer-Banks_Image-2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+
   }
  button[_ngcontent-c1]{
-     background-color:#2980b9;
-     color:#2c3e50;
+    background-color:yellowgreen;
+    color:black;
      width: 200px;
      height: 50px;
      font-weight: 800;
@@ -16,19 +20,16 @@
      border: 2px solid black;
     border-radius: 15px;
  }
- h2[_ngcontent-c1]{
-    background-color:#2980b9;
-    color:#2c3e50;
- }
+
 h1[_ngcontent-c1]{
-    background-color:#2980b9;
-    color:#2c3e50;
+    color:white;
+   
  }
 
 
  .card {
     border: 2px solid white;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: #c0392b;
     margin: 0 10px 5px 10px;
     width: 20%;
@@ -55,9 +56,14 @@ h1[_ngcontent-c1]{
 }
 
 .container {
-    margin-top: 10px;
-
-background-color: #2980b9;
+    margin-top: 116px;
+    color:white;
+    width: 100%;
+}
+.row{
+    background-image: url("https://ak4.picdn.net/shutterstock/videos/15795334/thumb/6.jpg?i10c=img.resize(height:160)");
+    border: 5px white solid;
+    border-radius: 12px;
 }
 
 section {
@@ -67,7 +73,8 @@ section {
 
 #displayBikesContainer {
     width: 100%;
-    
+    background-image: url("https://9097bca1a75e8bb2e831365d-hrvfitltd.netdna-ssl.com/wp-content/uploads/2014/11/cycling04-1920x800-background.jpg");
+
 }
 
 #displayBikesContainer div {
