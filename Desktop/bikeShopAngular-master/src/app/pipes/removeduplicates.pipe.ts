@@ -1,30 +1,14 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import * as _ from 'lodash';
+import { Pipe, PipeTransform } from "@angular/core";
+import * as _ from "lodash";
 @Pipe({
-    name: 'removeduplicates'
+  name: "removeduplicates"
 })
 export class RemoveduplicatesPipe implements PipeTransform {
-    transform(value: any): any {
-
-
-
-
-        if (value !== undefined && value !== null) {
-            return _.uniqBy(value, 'model');
-
-
-        }
-
-
-
-
-
-        return value;
+  transform(value: any): any {
+    if (value !== undefined && value !== null) {
+      return _.uniqBy(value, "model");
     }
 
-
-
-
-
-
+    return value;
+  }
 }
